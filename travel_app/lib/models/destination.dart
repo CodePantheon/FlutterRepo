@@ -35,7 +35,31 @@ final List<Activity> activities = [
       rating: 4
   ),
   Activity(
-      imageUrl: "assets/images/smurano.jpg",
+      imageUrl: "assets/images/murano.jpg",
+      name: "Murano and Burano Tour",
+      type: "Sightseeing tour",
+      startTimes: ["12:30 PM", "02:00 PM"],
+      price: 125,
+      rating: 3
+  ),
+  Activity(
+      imageUrl: "assets/images/stmarksbasilica.jpg",
+      name: "St. Mark's Basilica",
+      type: "Sightseeing tour",
+      startTimes: ["09:00 AM", "11:00 AM"],
+      price: 50,
+      rating: 5
+  ),
+  Activity(
+      imageUrl: "assets/images/gondola.jpg",
+      name: "Walking tour and Gandola Ride",
+      type: "Sightseeing tour",
+      startTimes: ["11:00 AM", "01:00 PM"],
+      price: 210,
+      rating: 4
+  ),
+  Activity(
+      imageUrl: "assets/images/murano.jpg",
       name: "Murano and Burano Tour",
       type: "Sightseeing tour",
       startTimes: ["12:30 PM", "02:00 PM"],
