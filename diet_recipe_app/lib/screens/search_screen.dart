@@ -17,7 +17,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> _diets = widget.dietRecipePresenter.getSupportedDiets();
+    List<String> _diets = widget.dietRecipePresenter.supportedDiets;
 
     return Scaffold(
       body: Container(
