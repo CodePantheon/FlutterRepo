@@ -4,6 +4,21 @@ import 'package:diet_recipe_app/services/api_service.dart';
 
 class DietRecipePresenter
 {
+  List<String> getSupportedDiets(){
+    return [
+      "None",
+      "Gluten Free",
+      "Ketogenic",
+      "Lacto-Vegeterian",
+      "Ovo-Vegeterian",
+      "Vegan",
+      "Pesceterian",
+      "Paleo",
+      "Primal",
+      "Whoole30"
+    ];
+  }
+
   Future<MealPlan> getMealPlan({int targetCalories, String diet}) async{
     var mealPlan = await APIService.instance.generateMealPlan(targetCalories: targetCalories, diet: diet);
     return mealPlan;

@@ -12,24 +12,13 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  final List<String> _diets = [
-    "None",
-    "Gluten Free",
-    "Ketogenic",
-    "Lacto-Vegeterian",
-    "Ovo-Vegeterian",
-    "Vegan",
-    "Pesceterian",
-    "Paleo",
-    "Primal",
-    "Whoole30"
-  ];
-
   double _targetCalories = 2250.0;
   String _diet = "None";
 
   @override
   Widget build(BuildContext context) {
+    List<String> _diets = widget.dietRecipePresenter.getSupportedDiets();
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
