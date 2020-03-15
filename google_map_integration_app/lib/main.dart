@@ -27,6 +27,21 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  final double latitude = 12.9880;
+  final double longitude = 77.6895;
+  List<Marker> mapMarkers = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    mapMarkers.add(Marker(
+      markerId: MarkerId("MahaDevPura"),
+      draggable: false,
+      position: LatLng(latitude, longitude)
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,9 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
           child:
           GoogleMap(
             initialCameraPosition: CameraPosition(
-              target: LatLng(12.9880, 77.6895),
+              target: LatLng(latitude, longitude),
               zoom: 12.0,
             ),
+            markers: Set.from(mapMarkers),
           ),
         ),
       ),
